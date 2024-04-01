@@ -2,7 +2,7 @@ name: Build APK
 
 on:
   push:
-    branches: ["main"]
+    branches: ["master"]
   release:
     types: ["published"]
   workflow_dispatch:
