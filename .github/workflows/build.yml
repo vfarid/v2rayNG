@@ -2,7 +2,9 @@ name: Build APK
 
 on:
   push:
+    branches: ["main"]
   release:
+    types: ["published"]
   workflow_dispatch:
     inputs:
       XRAY_CORE_VERSION:
@@ -68,6 +70,5 @@ jobs:
       if: github.event_name == 'release'
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
-        file: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/*
-        tag: ${{ github.ref }}
+        file: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/*.apk
         overwrite: true
