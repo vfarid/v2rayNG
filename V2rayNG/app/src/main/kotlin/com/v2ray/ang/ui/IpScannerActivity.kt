@@ -124,7 +124,20 @@ class IpScannerActivity : BaseActivity() {
             toast(R.string.toast_failure)
         }
     }
-    
+
+//    private fun applyResult() {
+//        toast(R.string.ip_scanner_applying_ips)
+//
+//        // TODO
+//
+//        val mainIntent = Intent(this, MainActivity::class.java)
+//        mainIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//        mainIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//        mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//        startActivity(mainIntent);
+//        toast(R.string.ip_scanner_applied)
+//    }
+
     override fun onKeyDown(keyCode: Int, event: KeyEvent): Boolean {
         if (keyCode == KeyEvent.KEYCODE_BACK || keyCode == KeyEvent.KEYCODE_BUTTON_B) {
             cancelScan()
