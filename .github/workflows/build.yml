@@ -72,3 +72,4 @@ jobs:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/*.apk
         overwrite: true
+        file_glob: true
